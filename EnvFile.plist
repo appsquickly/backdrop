@@ -15,7 +15,7 @@
 	        <key>TyphoonConfigFilename</key>
             <string>Config_devlopment.json</string>
             <key>CFBundleDisplayName</key>
-            <string>Yello (Dev)</string>
+            <string>Green (Dev)</string>
             <key>CFBundleIconFiles</key>
             <array>
                 <string>icons_dev_58.png</string>
@@ -30,7 +30,7 @@
             <key>TyphoonConfigFilename</key>
             <string>Config_staging.json</string>
             <key>CFBundleDisplayName</key>
-            <string>Yello (Staging)</string>
+            <string>Green (Staging)</string>
             <key>CFBundleIconFiles</key>
             <array>
                 <string>icons_staging_58.png</string>
@@ -45,7 +45,7 @@
             <key>TyphoonConfigFilename</key>
             <string>Config_staging.json</string>
             <key>CFBundleDisplayName</key>
-            <string>Yello (Staging)</string>
+            <string>Green!</string>
             <key>CFBundleIconFiles</key>
             <array>
                 <string>Icon_prod-60@2x.png</string>
