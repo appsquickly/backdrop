@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>ProjectName</key>
+    <string>Green</string>
+	<key>InfoPlist</key>
+	<string>Info.plist</string>
+    <key>CreatedDate</key>
+    <date>2015-07-19T00:00:00Z</date>
+	<key>environments</key>
+	<dict>
+	    <key>development</key>
+	    <dict>
+	        <key>TyphoonConfigFilename</key>
+            <string>Config_devlopment.json</string>
+            <key>CFBundleDisplayName</key>
+            <string>Yello (Dev)</string>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>icons_dev_58.png</string>
+                <string>icons_dev_80.png</string>
+                <string>icons_dev_87.png</string>
+                <string>icons_dev_120.png</string>
+                <string>icons_dev_180.png</string>
+            </array>
+	    </dict>
+	    <key>staging</key>
+        <dict>
+            <key>TyphoonConfigFilename</key>
+            <string>Config_staging.json</string>
+            <key>CFBundleDisplayName</key>
+            <string>Yello (Staging)</string>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>icons_staging_58.png</string>
+                <string>icons_staging_80.png</string>
+                <string>icons_staging_87.png</string>
+                <string>icons_staging_120.png</string>
+                <string>icons_staging_180.png</string>
+            </array>
+        </dict>
+        <key>production</key>
+        <dict>
+            <key>TyphoonConfigFilename</key>
+            <string>Config_staging.json</string>
+            <key>CFBundleDisplayName</key>
+            <string>Yello (Staging)</string>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>Icon_prod-60@2x.png</string>
+                <string>Icon_prod-60@3x.png</string>
+                <string>Icon_prod-Small-40@2x.png</string>
+                <string>Icon_prod-Small-40@3x.png</string>
+                <string>Icon_prod-Small@2x.png</string>
+                <string>Icon_prod-Small@3x.png</string>
+            </array>
+        </dict>
+	</dict>
+</dict>
+</plist>

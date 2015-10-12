@@ -1,0 +1,30 @@
+{
+  "network": {
+    "baseUrl": "NSURL(https://driver.yello.delivery/v1/)"
+  },
+  "google_places_api_key": "AIzaSyDvNuZQDdphrcitIh4ec1s060RkPafdEXM",
+  "pubNub": {
+    "publishKey": "pub-c-811c6537-1862-4b4c-9dac-13220db0928d",
+    "subscribeKey": "sub-c-ac40e412-23b2-11e5-8ae2-0619f8945a4f"
+  },
+  "shifts": {
+    "monitor": {
+      "storeChannelInterval": "NSNumber(20)",
+      "driverChannelInterval": "NSNumber(3)"
+    },
+    "commencementRules": {
+      "timeBeforeScheduledStartAllowed": 600,
+      "timeAfterScheduledStartAllowed": 600,
+      "distanceFromScheduledLocationAllowed": 100
+    }
+  },
+  "crash_reporting": {
+    "redmine_url": "http://redmine.appsquick.ly/",
+    "redmine_project_id": "driveyello",
+    "redmine_user_token": "3ec08c445cd6a1a93d980b1b0864795ab9e5932e",
+    "redmine_watcher_ids": [3, 4],
+    "redmine_git_hash_field": 1,
+    "redmine_crash_id_field": 2,
+    "symbolicate_url": "http://builds.appsquick.ly:5678/symbolicate"
+  }
+}
