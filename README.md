@@ -30,27 +30,34 @@ Here's how we do it:
 (the script below uses <a href="https://github.com/nomad/shenzhen">Shenzhen</a> to upload the build)
 
 ```bash
+#!/bin/sh
+
+
+product_name='AmazingApp'
+provisioning_profile='My Store Profile'
+
 #Fail immediately if a task fails
 set -e
 set -o pipefail
 
 echo "--- Backing up Info.plist ---"
-cp "./AppName/Supporting Files/Info.plist" "./AppName/Supporting Files/Info.plist.bak"
+cp "./$product_name/Supporting Files/Info.plist" "./$product_name/Supporting Files/Info.plist.bak"
 
-rm -fr ./AppName_staging.ipa
-rm -fr ./AppName.xcarchive/
+echo "--- Building ---"
 
-./backdrop.swift --select staging --newVersion
+rm -fr ./$product_name.ipa
+rm -fr ./$product_name.xcarchive/
 
-xcodebuild -workspace AppName.xcworkspace/ -scheme AppScheme -destination 'generic/platform=iOS' -archivePath 'AppName.xcarchive' archive 
-xcodebuild -exportArchive -exportFormat ipa -archivePath "AppName.xcarchive"  -exportPath "AppName_staging.ipa" -exportProvisioningProfile "Profile"
-ipa info AppName_staging.ipa
+./backdrop.swift --select production --newVersion
+
+xcodebuild -workspace $product_name.xcworkspace/ -scheme $product_name -destination 'generic/platform=iOS' -archivePath "$product_name.xcarchive" archive | xcpretty
+xcodebuild -exportArchive -exportFormat ipa -archivePath "$product_name.xcarchive"  -exportPath "$product_name.ipa" -exportProvisioningProfile "$provisioning_profile"
+ipa info $product_name.ipa
 
 echo "------ Built ------"
-rm "./AppName/Supporting Files/Info.plist"
-mv "./AppName/Supporting Files/Info.plist.bak" "./Yello/Supporting Files/Info.plist"
-
-ipa distribute:itunesconnect -a somebody@somewhere.com -p password -i 1031066688 --upload --verbose ./AppName_staging.ipa 
+rm "./$product_name/Supporting Files/Info.plist"
+mv "./$product_name/Supporting Files/Info.plist.bak" "./$product_name/Supporting Files/Info.plist"
+./backdrop.swift
 ```
 
 
