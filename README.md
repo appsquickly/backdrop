@@ -10,7 +10,7 @@ Backdrop is a utility for configuring an application's Info.plist file for separ
 * We create an <a href="https://github.com/appsquickly/backdrop/blob/master/EnvFile.plist">`EnvFile.plist`</a> that declares the properties (icon file, TyphoonConfig, CFBundleID, etc) that will be different between each environment. 
 * We use a cmd-line utility to apply those configurations. 
 
-Optionally, the cmd-line utility can apply a build number in the format: `<week_number_since_project_start>.<day_in_week>.<build_number_for_day>`
+Optionally, the cmd-line utility can apply a build number - `CFBundleVersion` - in the format: `<week_number_since_project_start>.<day_in_week>.<build_number_for_day>`
 
 # Running
 
