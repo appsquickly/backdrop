@@ -15,9 +15,6 @@ import XCTest
 
 class EnvFileTests: XCTestCase {
 
-    func test_throws_exception_instantiated_with_new_envFilePath_and_empty_plistFilePath() {
-        _ = EnvFile(envFilePath: "EnvFile.plist", infoPlistPath: nil, projectName: nil)
-    }
 
     func test_loads_env_from_disk() {
         let currentPath = NSFileManager.defaultManager().currentDirectoryPath;
