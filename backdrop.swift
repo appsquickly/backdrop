@@ -1012,7 +1012,15 @@ public class EnvFile {
 
         let fileManager = NSFileManager.defaultManager()
         if (fileManager.fileExistsAtPath(self.envFilePath)) {
-            self.storage = NSDictionary(contentsOfFile: envFilePath) as! Dictionary<String, AnyObject>
+            let dictionary = NSDictionary(contentsOfFile: envFilePath)
+            if (dictionary != nil) {
+                self.storage = dictionary as! Dictionary<String, AnyObject>
+            }
+            else {
+                NSException(name: NSInternalInconsistencyException, reason:
+                "The file \(envFilePath) is not a valid EnvFile", userInfo: nil).raise()
+            }
+
         } else if (infoPlistPath != nil && projectName != nil) {
             self.infoPlistRelativePath = infoPlistPath!
             self.projectName = projectName!
