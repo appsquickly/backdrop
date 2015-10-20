@@ -67,6 +67,6 @@ Later we'll publish to Brew and MacPorts, but for now, <a href="https://github.c
 
 # TODO
 
-1. Make the script peform the build and upload to iTunes Connect, rather than use the bash script above. 
+1. Make backdrop peform the build and upload to iTunes Connect, rather than use the bash script above. 
 2. Remove the dependency on Shenzhen ipa distribute task. 
 3. Add generation of debug symbols and tie in to our (or others?) crash reporters
