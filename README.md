@@ -1,11 +1,11 @@
-#About
+# About
 
 Backdrop is a utility for configuring an application's Info.plist file for separate environments. It can be used: 
 
 * In dev environments for quickly switching between dev, staging, production environments. 
 * On continuous integration build servers to automate deployment of pre-configured builds. 
 
-#How Does it Work?
+# How Does it Work?
 
 * We create an <a href="https://github.com/appsquickly/backdrop/blob/master/EnvFile.plist">`EnvFile.plist`</a> that declares the properties (icon file, TyphoonConfig, CFBundleID, etc) that will be different between each environment. 
 * We use a cmd-line utility to apply those configurations. 
